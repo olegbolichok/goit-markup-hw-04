@@ -5,6 +5,8 @@
     --primary-text-color: #757575;
     --title-text-color: #212121;
     --accent-color: #2196f3;
+    --hero-background-color: #c4c4c4;
+    --icon-color: #afb1b8;
 }
 /* white color #FFFFFF */
 /* black color #000000 */
@@ -94,6 +96,8 @@ header {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    padding-bottom: 24px;
+    padding-top: 24px;
 }
 .site-nav a:hover,
 .site-nav a:focus {
@@ -107,7 +111,7 @@ header {
     margin-left: auto;
 }
 .auth-nav li:not(:last-child) {
-    margin-right: 50px;
+    margin-right: 30px;
 }
 .auth-nav a {
     color: var(--primary-text-colors);
@@ -116,14 +120,48 @@ header {
     line-height: 1.14;
     letter-spacing: 0.02em;
 }
-.auth-nav a:hover,
-.auth-nav a:focus {
+.auth-nav .list a:hover,
+.auth-nav .list a:focus {
     color: var(--accent-color);
+    fill: var(--accent-color);
 }
-
+.auth-nav .list a {
+    color: var(--primary-text-color);
+    fill: var(--primary-text-color);
+}
+.auth-nav .list a {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding-bottom: 24px;
+    padding-top: 24px;
+}
+.nav-icon {
+    margin-right: 10px;
+}
+.list .phone {
+    width: 12px;
+    height: 16px;
+}
+.list .envelope {
+    width: 16px;
+    height: 12px;
+}
+.hero div {
+    display: flex;
+    justify-content: center;
+}
 .hero {
-    background-color: var(--footer-background-color);
+    background-color: var(--hero-background-color);
+    background-image: linear-gradient(
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 
+    max-width: 1600px;
     width: 1600px;
     height: 600px;
     margin-left: auto;
@@ -169,6 +207,7 @@ header {
 .feature-list .item {
     width: 270px;
 }
+
 .feature-list .title {
     color: var(--title-text-color);
     font-weight: 700;
@@ -182,6 +221,19 @@ header {
 .feature-list p {
     font-size: 14px;
     line-height: 1.7;
+}
+.feature-list .border {
+    display: flex;
+    width: 270px;
+    height: 120px;
+    background-color: var(--secondary-background-color);
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+.feature-icon {
+    width: 70px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .deals-box {
     padding-bottom: 94px;
@@ -221,16 +273,82 @@ header {
         0px 2px 1px rgba(0, 0, 0, 0.2);
 
     width: 270px;
-    height: 368px;
 }
-.staff-list li:not(:last-child) {
+.staff-list .person:not(:last-child) {
     margin-right: 30px;
 }
 .staff-list .position {
-    padding: 30px 0;
+    padding: 30px 32px;
 }
+
+.form {
+    display: flex;
+    width: 206px;
+    height: 44px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.position-item {
+    display: flex;
+}
+.position-item:not(:last-child) {
+    margin-right: 10px;
+}
+.position-link {
+    display: flex;
+    fill: var(--icon-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.position-link:hover,
+.position-link:focus {
+    fill: var(--primary-background-color);
+    background-color: var(--accent-color);
+}
+
+/* ПОСТОЯННЫЕ КЛИЕНТЫ */
+
+.clients .section-title {
+    margin-bottom: 50px;
+}
+.clients .container {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.clients-list {
+    display: flex;
+}
+.clients-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--icon-color);
+    fill: var(--icon-color);
+    border-radius: 4px;
+}
+.clients-item:not(:last-child) {
+    margin-right: 30px;
+}
+.clients-item a {
+    fill: var(--icon-color);
+}
+.clients-item a:hover,
+.clients-item a:focus {
+    fill: var(--accent-color);
+}
+/* FOOTER */
+
 .position h3 {
     margin-bottom: 10px;
+}
+.position p {
+    margin-bottom: 16px;
 }
 footer {
     background-color: var(--footer-background-color);
@@ -267,7 +385,56 @@ footer .container {
     color: var(--accent-color);
 }
 
+footer {
+    display: flex;
+    justify-content: flex-start;
+    width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container-footer {
+    margin-right: 70px;
+    margin-left: 215px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.join {
+    padding-top: 72px;
+    padding-bottom: 100px;
+}
+.join p {
+    display: flex;
+    color: var(--primary-background-color);
+    font-weight: 700;
+    line-height: 1.14;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.join-list {
+    display: flex;
+}
+.join-item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.join-link {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.1);
+    fill: var(--primary-background-color);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+.join-link:hover,
+.join-link:focus {
+    background-color: var(--accent-color);
+}
+
 /* Buttons */
+
 button {
     font-family: inherit;
 }
@@ -276,11 +443,6 @@ button {
     border-radius: 4px;
     border: none;
     cursor: pointer;
-}
-
-.hero div {
-    display: flex;
-    justify-content: center;
 }
 
 .button.primary {
@@ -292,6 +454,10 @@ button {
     font-size: 16px;
     line-height: 1.9;
     letter-spacing: 0.06em;
+}
+.button.primary:hover,
+.button.primary:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .button.secondary {
     padding: 6px 22px;
@@ -309,6 +475,8 @@ button {
 .button.secondary:focus {
     color: var(--primary-background-color);
     background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* Portfolio styles */
@@ -342,6 +510,11 @@ button {
 }
 .example-list li:nth-child(3n) {
     margin-right: 0;
+}
+.example-list li:hover,
+.example-list li:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .example-list .title {
     color: var(--title-text-color);
