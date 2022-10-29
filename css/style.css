@@ -323,25 +323,29 @@ header {
     display: flex;
 }
 .clients-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 170px;
     height: 92px;
-    border: 1px solid var(--icon-color);
-    fill: var(--icon-color);
-    border-radius: 4px;
 }
 .clients-item:not(:last-child) {
     margin-right: 30px;
 }
-.clients-item a {
+/* tnp */
+
+.tmp {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     fill: var(--icon-color);
+    border: 1px solid var(--icon-color);
+    border-radius: 4px;
 }
-.clients-item a:hover,
-.clients-item a:focus {
+.tmp:hover {
     fill: var(--accent-color);
+    border: 1px solid var(--accent-color);
 }
+
 /* FOOTER */
 
 .position h3 {
